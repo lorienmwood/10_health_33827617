@@ -54,7 +54,7 @@
 
   <h2>Add a new exercise</h2>
 
-  <form action="/exercise/<%= workout.id %>/exercises/added" method="POST">
+  <form action="/added" method="POST">
 
     <p>
       <label for="exerciseTypeId">Exercise:</label>
@@ -112,15 +112,3 @@
 </body>
 </html>
 
-<% if (currentUser) { %>
-        <p class="centered-title">Welcome, <%= currentUser.firstName %>!</p>
-        <p><a href="/about">About <%= appData.appName %></a></p>
-        <p><a href="/user/profile">View your profile</a></p>
-        <p><a href="/exercise/add">Add a New Workout</a></p>
-        <p><a href="/exercise/search">Find Previous Workouts</a></p>
-        <p><a href="/user/logout">Logout</a></p>
-        <% } else { %>
-              <p><a href="/about">About <%= appData.appName %></a></p>
-          <p><a href="/user/login">Login</a> </p>
-          <p> <a href="/user/register">Register</a></p>
-          <% } %>

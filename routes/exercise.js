@@ -124,8 +124,7 @@ router.post("/:workoutId/exercises/added", (req, res, next) => {
     (err) => {
       if (err) return next(err);
 
-      res.redirect(`/${workoutId}/exercises/add`);
-      
+      res.redirect(`/exercise/${workoutId}/exercises/add`);
     }
   );
 });
