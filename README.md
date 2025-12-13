@@ -67,8 +67,6 @@ These pages check access and redirect to the login page if the user is not logge
 /user/profile – the user profile is only shown to logged-in users.
 
 
-## Task 7: Sanitisation
-
 #### For the register form:
 
 I used express-sanitizer to protect the register form from XSS attacks.
@@ -87,3 +85,4 @@ The password field is not sanitised because it is never displayed and is only ha
 
 - The username field is sanitised to prevent XSS attacks through malicious input.
 - The password field is not sanitised because it is never displayed and is only used for secure comparison with the hashed password. Sanitising it could change the input and break authentication.
+

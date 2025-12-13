@@ -4,7 +4,6 @@ const router = express.Router();
 const { check, validationResult } = require("express-validator");
 const db = global.db;
 
-
 function requireLogin(req, res, next) {
   if (!req.session || !req.session.user) {
     return res.redirect("/user/login");
@@ -23,7 +22,6 @@ router.get("/add", requireLogin, (req, res, next) => {
   });
 });
 
-
 router.post("/added", requireLogin, (req, res, next) => {
   const { workoutDate, workoutTypeId, intensity, notes } = req.body;
 
@@ -40,7 +38,7 @@ router.post("/added", requireLogin, (req, res, next) => {
 
       const workoutId = result.insertId;
 
-      res.redirect(`/exercise/${workoutId}/exercises/add`);
+      res.redirect(`../exercise/${workoutId}/exercises/add`);
     }
   );
 });
@@ -131,7 +129,6 @@ router.post("/:workoutId/exercises/added", (req, res, next) => {
   );
 });
 
-
 router.get("/search", requireLogin, (req, res) => {
   res.render("search.ejs");
 });
@@ -154,7 +151,7 @@ router.get(
     const search = `%${keyword}%`;
     const userId = req.session.user.id;
 
-     const sql = `
+    const sql = `
       SELECT w.*, wt.name AS type
       FROM workouts w
       JOIN workoutTypes wt ON w.workoutTypeId = wt.id
