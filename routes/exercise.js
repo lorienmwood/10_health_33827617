@@ -44,7 +44,7 @@ router.post("/added", requireLogin, (req, res, next) => {
 });
 
 //add new exercise to workout
-router.get("/:workoutId/exercises/add", (req, res, next) => {
+router.get("../:workoutId/exercises/add", (req, res, next) => {
   const workoutId = req.params.workoutId;
 
   const workoutSql = `
@@ -90,7 +90,7 @@ router.get("/:workoutId/exercises/add", (req, res, next) => {
   });
 });
 
-router.post("/:workoutId/exercises/added", (req, res, next) => {
+router.post("../:workoutId/exercises/added", (req, res, next) => {
   const workoutId = req.params.workoutId;
 
   const {
