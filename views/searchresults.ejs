@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <title>Search Results for "<%= keyword %>"</title>
+  <link rel="stylesheet" href="/main.css" />
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="card">
+
+      <h1>Search Results for "<%= keyword %>"</h1>
+
+      <ul class="workout-list">
+        <% workouts.forEach(function(w) { %>
+          <li>
+            <span class="workout-title"><%= w.type %></span>
+            <span class="workout-meta">
+              <%= new Date(w.workoutDate).toISOString().split("T")[0] %> · 
+            </span>
+          </li>
+        <% }) %>
+      </ul>
+
+      <% if (workouts.length === 0) { %>
+        <p>No workouts found.</p>
+      <% } %>
+
+    <a href="/">Back to profile</a>
+
+    </div>
+  </div>
+</body>
+</html>

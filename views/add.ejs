@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+  <title><%=appData.appName%> - Add Workout</title>
+</head>
+<link rel="stylesheet" type="text/css" href="/main.css" />
+
+<body>
+  <div class="page-center">
+    <div class="form-card">
+      <h1><%=appData.appName%> - Add a Workout</h1>
+
+      <form action="/exercise/added" method="POST">
+        <p>
+          <label for="workoutDate">Date:</label>
+          <input id="workoutDate" name="workoutDate" type="date" required />
+        </p>
+
+        <p>
+          <label for="workoutTypeId">Workout type:</label>
+          <select id="workoutTypeId" name="workoutTypeId" required>
+            <% workoutTypes.forEach(type=> { %>
+              <option value="<%= type.id %>">
+                <%= type.name %>
+              </option>
+              <% }) %>
+          </select>
+        </p>
+
+        <p>
+          <label for="intensity">Intensity:</label>
+          <select id="intensity" name="intensity">
+            <option value="">-- choose --</option>
+            <option value="Low">Low</option>
+            <option value="Moderate">Moderate</option>
+            <option value="High">High</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="notes">Notes:</label><br />
+          <br /> <textarea id="notes" name="notes" rows="4" cols="50" ></textarea>
+        </p>
+
+        <p>
+          <input type="submit" value="Save workout" />
+          <a href="/">Cancel</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

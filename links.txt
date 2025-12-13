@@ -1,0 +1,9 @@
+home=https://www.doc.gold.ac.uk/usr/153/
+about=https://www.doc.gold.ac.uk/usr/153/about
+search=home=https://www.doc.gold.ac.uk/usr/153/exercise/search
+profile=https://www.doc.gold.ac.uk/usr/153/user/profile
+add new workout=home=https://www.doc.gold.ac.uk/usr/153/exercise/add
+register=home=https://www.doc.gold.ac.uk/usr/153/user/register
+login=home=https://www.doc.gold.ac.uk/usr/153/user/login
+logout=home=https://www.doc.gold.ac.uk/usr/153/user/logout
+

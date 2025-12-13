@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page for <%=appData.appName%>
+    </title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+
+<body>
+    <div class="page-center">
+        <div class="form-card">
+            <h1>Login page for <%=appData.appName%>
+            </h1>
+
+            <form method="POST" action="/user/loggedin">
+                <div class="forms">
+                    <label>Username:</label><br />
+                    <input type="text" name="username" />
+                </div>
+
+                <div class="forms">
+                    <label>Password:</label><br />
+                    <input type="password" name="password" />
+                </div>
+
+                <p class="formButton">
+                    <button type="submit">Login</button>
+                </p>
+            </form>
+
+            <p><a href="/user/register">Create an account</a></p>
+            <p><a href="/">Home</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Your Profile at <%=appData.appName%></title>
+  <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="card">
+
+      <h1><%= currentUser.firstName %>'s Profile</h1>
+       
+
+      <div class="profile-section">
+        <p><strong>Username:</strong>
+          <%= user.username %>
+        </p>
+        <p><strong>Name:</strong>
+          <%= user.firstName %>
+            <%= user.lastName %>
+        </p>
+        <p><strong>Email:</strong>
+          <%= user.email %>
+        </p>
+      </div>
+
+      <h2>Workout Summary</h2>
+      <div class="profile-section">
+        <p><strong>Total Workouts:</strong>
+          <%= stats.workoutCount %>
+        </p>
+      </div>
+
+        <p>
+          <strong>Last workout date:</strong>
+          <% if (stats.lastWorkoutDate) { %>
+            <%= stats.lastWorkoutDate.toISOString().split("T")[0] %>
+              <% } else { %>
+                No workouts yet
+                <% } %>
+        </p>
+      </div>
+  <div class="formButton">
+  <a href="/exercise/add" class="button">Add a Workout</a>
+  <a href="/" class="button">Home</a>
+</div>
+    </div>
+  </div>
+
+</body>
+
+</html>

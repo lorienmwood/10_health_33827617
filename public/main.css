@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f8f6;
+  color: #2f3a36;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-size: 28px;
+  text-align: center;
+  color: #5c8f7b;
+}
+
+h2 {
+  font-size: 20px;
+  color: #7aa894;
+}
+
+a {
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+a:link,
+a:visited {
+  color: #5c8f7b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  background: #5c8f7b;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+a:active {
+  color: #8fc1ad;
+}
+
+.card,
+.form-card {
+  background: #ffffff;
+  width: 90%;
+  max-width: 750px;
+  padding: 30px 32px;
+  border-radius: 14px;
+  border: 1px solid #e1e8e5;
+  box-shadow: 0 6px 16px rgba(92, 143, 123, 0.12);
+  margin-bottom: 30px;
+}
+
+.page-center {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-card label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.form-card input,
+.form-card select,
+.form-card textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cfd9d4;
+  background: #fafdfb;
+  color: #2f3a36;
+  font-size: 15px;
+}
+
+.form-card input:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+  outline: none;
+  border-color: #7aa894;
+  box-shadow: 0 0 0 3px rgba(122, 168, 148, 0.25);
+}
+
+.button,
+button {
+  display: inline-block;
+  padding: 11px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #5c8f7b;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  margin-top: 5px;
+}
+
+.button:hover,
+button:hover {
+  background: #6fa892;
+  transform: translateY(-1px);
+}
+
+.button:active,
+button:active {
+  transform: translateY(0);
+}
+
+.forms {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+
+.forms label {
+  width: 140px;
+  text-align: right;
+  font-weight: 600;
+  color: #2f3a36;
+}
+
+.forms input,
+.forms select,
+.forms textarea {
+  flex: 1;
+  max-width: 460px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #cfd9d4;
+  background: #fafdfb;
+}
+
+.formButton {
+  text-align: center;
+  margin-top: 15px;
+}
+.formButton .button {
+  color: white;
+}
+
+.centered-title {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 15px;
+  font-weight: 600;
+}

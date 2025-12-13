@@ -1,0 +1,26 @@
+{
+  "name": "10_health_33827617",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorienmwood/10_health_33827617.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lorienmwood/10_health_33827617/issues"
+  },
+  "homepage": "https://github.com/lorienmwood/10_health_33827617#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "express-validator": "^7.3.1",
+    "mysql2": "^3.15.3"
+  }
+}
