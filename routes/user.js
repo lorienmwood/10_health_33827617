@@ -115,7 +115,7 @@ router.post(
           firstName: user.firstName,
         };
 
-        res.redirect("/");
+        res.redirect("../");
       });
     });
   }
