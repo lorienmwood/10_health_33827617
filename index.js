@@ -2,9 +2,13 @@ var express = require("express");
 var ejs = require("ejs");
 const path = require("path");
 const session = require("express-session");
-
+const expressSanitizer = require('express-sanitizer');
+require("dotenv").config();
+const mysql = require("mysql2");
 const app = express();
 const port = 8000;
+
+
 
 // use EJS as the view engine
 app.set("view engine", "ejs");
@@ -27,6 +31,17 @@ app.use((req, res, next) => {
   res.locals.currentUser = req.session.user || null;
   next();
 });
+
+const db = mysql.createPool({
+  host: "localhost",
+  user: "health_app",
+  password: "qwertyuiop",
+  database: "health",
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+});
+
 
 // load the route handlers
 const mainRoutes = require("./routes/main");

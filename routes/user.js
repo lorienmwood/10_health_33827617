@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
-const db = require("../db");
+const db = global.db;
 
 const saltRounds = 10;
 const { check, validationResult } = require("express-validator");
@@ -84,7 +84,7 @@ router.get("/login", (req, res) => {
 router.post(
   "/loggedin",
   [check("username").notEmpty(), check("password").notEmpty()],
-  
+
   function (req, res, next) {
     const { username, password } = req.body;
 

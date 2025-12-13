@@ -1,7 +1,7 @@
 // create a new router
 const express = require("express");
 const router = express.Router();
-const db = require("../db");
+const db = global.db;
 
 // handle routes
 router.get('/',function(req, res, next){
