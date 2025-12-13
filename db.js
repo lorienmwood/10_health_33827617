@@ -1,5 +1,6 @@
 
 var mysql = require("mysql2");
+global.db = db;
 
 // create a connection pool
 const db = mysql.createPool({

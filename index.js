@@ -1,6 +1,7 @@
 var express = require("express");
 var ejs = require("ejs");
 const path = require("path");
+require("./db"); 
 const session = require("express-session");
 const expressSanitizer = require('express-sanitizer');
 require("dotenv").config();
@@ -30,16 +31,6 @@ app.use(
 app.use((req, res, next) => {
   res.locals.currentUser = req.session.user || null;
   next();
-});
-
-const db = mysql.createPool({
-  host: "localhost",
-  user: "health_app",
-  password: "qwertyuiop",
-  database: "health",
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
 });
 
 
