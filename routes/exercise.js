@@ -90,7 +90,7 @@ router.get("/:workoutId/exercises/add", (req, res, next) => {
   });
 });
 
-router.post("../:workoutId/exercises/added", (req, res, next) => {
+router.post("/:workoutId/exercises/added", (req, res, next) => {
   const workoutId = req.params.workoutId;
 
   const {
