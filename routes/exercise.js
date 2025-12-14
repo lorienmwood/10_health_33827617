@@ -86,7 +86,7 @@ router.get("/:workoutId/exercises/add", (req, res, next) => {
         res.render("addexercise.ejs", {
           workout,
           exerciseTypes,
-          existingExercises,
+          existingExercises, baseUrl: req.baseUrl
         });
       });
     });
