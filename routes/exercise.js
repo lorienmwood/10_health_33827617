@@ -38,7 +38,8 @@ router.post("/added", requireLogin, (req, res, next) => {
 
       const workoutId = result.insertId;
 
-      res.redirect(`../exercise/${workoutId}/exercises/add`);
+      // res.redirect(`../exercise/${workoutId}/exercises/add`);
+       res.redirect(`/${workoutId}/exercises/add`);
     }
   );
 });
@@ -124,7 +125,8 @@ router.post("/:workoutId/exercises/added", (req, res, next) => {
     (err) => {
       if (err) return next(err);
 
-      res.redirect(`/exercise/${workoutId}/exercises/add`);
+      // res.redirect(`/exercise/${workoutId}/exercises/add`);
+       res.redirect(`/${workoutId}/exercises/add`);
     }
   );
 });
