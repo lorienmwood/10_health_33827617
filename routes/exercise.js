@@ -40,8 +40,6 @@ router.post("/added", requireLogin, (req, res, next) => {
 
       res.redirect(`../exercise/${workoutId}/exercises/add`);
     
-
-
     }
   );
 });
